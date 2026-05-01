@@ -4,6 +4,97 @@ import { useState } from "react";
 
 const projects = [
   {
+    id: -3,
+    company: "Gentle Monster",
+    title: "US 3PL 물류 백엔드 프로세스 구축",
+    subtitle: "글로벌 공급망(HQ > US 3PL) 연계 재고 운영 프로세스 표준화 및 설계",
+    period: "2025.06 ~",
+    team: "IT부문 PM팀",
+    role: [
+      "글로벌 공급망(HQ > US 3PL) 연계 재고 운영 프로세스 표준화 및 설계",
+    ],
+    tools: ["SAP", "OMS", "WMS", "NetSuite"],
+    summary:
+      "US 3PL 물류 백엔드 프로세스를 구축하여, 글로벌 공급망 내 HQ에서 US 3PL까지의 연계 재고 운영 프로세스를 표준화하고 설계하는 프로젝트.",
+    process: [
+      "글로벌 공급망 분석",
+      "프로세스 표준화 설계",
+      "구축",
+    ],
+    results: [],
+  },
+  {
+    id: -2,
+    company: "Gentle Monster",
+    title: "CA 법인 리테일 시스템 도입",
+    subtitle: "신규 법인의 판매·재고·입출고 운영 프로세스 통합 및 안정화",
+    period: "2025.01 ~ 2025.11",
+    team: "IT부문 PM팀",
+    role: [
+      "신규 법인의 판매·재고·입출고 운영 프로세스 통합 및 안정화",
+      "스토어 > 로케이션 별 재고 자동 검증 체계 구축",
+    ],
+    tools: ["SAP", "OMS", "WMS", "NetSuite", "Shopify"],
+    summary:
+      "Gentle Monster CA 법인의 리테일 시스템을 도입하여, 신규 법인의 판매·재고·입출고 운영 프로세스를 통합하고 안정화하는 프로젝트. 스토어별 로케이션 기반 재고 자동 검증 체계를 구축.",
+    process: [
+      "운영 프로세스 분석",
+      "시스템 통합 설계",
+      "안정화",
+      "재고 검증 체계 구축",
+    ],
+    results: [],
+  },
+  {
+    id: -1,
+    company: "Gentle Monster",
+    title: "US 법인 리테일 시스템 도입",
+    subtitle: "SAP·OMS·WMS·NetSuite·Shopify 연계 End-to-End 통합 운영 환경 구축",
+    period: "2025.01 ~ 2026.05",
+    team: "IT부문 PM팀",
+    role: [
+      "SAP·OMS·WMS·NetSuite·Shopify 연계를 통한 주문·매출·재고 End-to-End 통합 운영 환경 구축",
+      "온·오프라인 12개 스토어 운영 안정화",
+      "렌즈 비즈니스 특성을 반영한 LMS(Lens Management System) 구축",
+    ],
+    tools: ["SAP", "OMS", "WMS", "NetSuite", "Shopify"],
+    summary:
+      "Gentle Monster US 법인의 리테일 시스템을 도입하여, SAP·OMS·WMS·NetSuite·Shopify 연계를 통한 주문·매출·재고 End-to-End 통합 운영 환경을 구축. 온·오프라인 12개 스토어의 운영을 안정화하고, 렌즈 비즈니스 특성을 반영한 LMS를 구축.",
+    process: [
+      "시스템 연계 설계",
+      "End-to-End 운영 환경 구축",
+      "스토어 운영 안정화",
+      "LMS 구축",
+    ],
+    results: [],
+  },
+  {
+    id: 0,
+    company: "Gentle Monster",
+    title: "No-Figma 프로젝트",
+    subtitle: "AI 기반 기획 문서 작성·관리 자동화 프로젝트",
+    period: "2025.01 ~",
+    team: "IT부문 PM팀",
+    role: [
+      "Figma 중심 화면 기획 업무를 AI 기반 프로토타이핑 방식으로 개선하여 반복 문서 작업 효율화",
+      "Git 기반 버전관리 체계 도입으로 기획 변경 이력 관리 및 협업 생산성 향상, 업무 리드타임 단축",
+    ],
+    tools: ["AI Prototyping", "Git", "Claude Code"],
+    summary:
+      "기획 문서 작성·관리 자동화 프로젝트. Figma 중심의 화면 기획 업무를 AI 기반 프로토타이핑 방식으로 전환하여 반복 문서 작업을 효율화하고, Git 기반 버전관리 체계를 도입하여 기획 변경 이력 관리 및 협업 생산성을 향상.",
+    process: [
+      "기존 워크플로우 분석",
+      "AI 프로토타이핑 도입",
+      "Git 버전관리 체계 구축",
+      "팀 적용 및 안정화",
+    ],
+    results: [
+      "반복 문서 작업 효율화",
+      "업무 리드타임 단축",
+      "기획 변경 이력의 체계적 관리",
+    ],
+  },
+  {
     id: 1,
     company: "TeamFresh",
     title: "RDMS_JP",
@@ -177,9 +268,10 @@ const projects = [
 ];
 
 const skills = [
-  { category: "기획 도구", items: ["Figma", "JIRA", "Confluence", "Notion", "Google Sheets", "Diagrams"] },
+  { category: "기획 도구", items: ["Figma", "JIRA", "Confluence", "Notion", "Google Sheets", "Diagrams", "Claude Code", "Git"] },
+  { category: "시스템", items: ["SAP", "OMS", "WMS", "NetSuite", "Shopify", "ERP", "TMS", "CRM"] },
   { category: "역할", items: ["서비스 기획", "프로젝트 관리", "요구사항 분석", "화면 설계", "QA/QC", "운영 고도화"] },
-  { category: "도메인", items: ["유통/물류(ERP, WMS, OMS, TMS)", "커머스/라이브커머스", "여행/호텔 예약", "식자재 B2B 플랫폼", "뷰티 커뮤니티"] },
+  { category: "도메인", items: ["글로벌 리테일", "유통/물류", "커머스/라이브커머스", "여행/호텔 예약", "식자재 B2B 플랫폼", "뷰티 커뮤니티"] },
 ];
 
 export default function Home() {
@@ -210,8 +302,8 @@ export default function Home() {
           서비스 기획자 · Since 2021
         </p>
         <p className="mt-2 text-base text-gray-400 max-w-2xl leading-relaxed animate-fade-in-up animate-delay-300">
-          유통/물류, 커머스, 여행 플랫폼 등 다양한 도메인에서 문제를 정의하고<br className="hidden sm:block" />
-          사용자 중심의 서비스를 기획해 왔습니다.
+          글로벌 리테일, 유통/물류, 커머스, 여행 플랫폼 등 다양한 도메인에서<br className="hidden sm:block" />
+          문제를 정의하고 사용자 중심의 서비스를 기획해 왔습니다.
         </p>
       </section>
 
@@ -221,9 +313,9 @@ export default function Home() {
           <h2 className="text-2xl font-bold mb-8">About</h2>
           <div className="grid md:grid-cols-3 gap-8">
             {[
-              { label: "경력", value: "4년+", desc: "서비스 기획 / PM" },
-              { label: "프로젝트", value: "6개", desc: "B2B · B2C · 글로벌" },
-              { label: "도메인", value: "유통 · 커머스 · 여행", desc: "다양한 산업 경험" },
+              { label: "경력", value: "5년+", desc: "서비스 기획 / PM" },
+              { label: "프로젝트", value: "10개", desc: "B2B · B2C · 글로벌" },
+              { label: "도메인", value: "리테일 · 유통/물류 · 커머스 · 여행", desc: "다양한 산업 경험" },
             ].map((item) => (
               <div key={item.label} className="bg-white rounded-xl p-6 border border-gray-100">
                 <p className="text-sm text-gray-400 mb-1">{item.label}</p>
@@ -239,7 +331,7 @@ export default function Home() {
       <section id="projects" className="py-20">
         <div className="max-w-5xl mx-auto px-6">
           <h2 className="text-2xl font-bold mb-2">Projects</h2>
-          <p className="text-sm text-gray-400 mb-10">2021 — 2024</p>
+          <p className="text-sm text-gray-400 mb-10">2021 — 2026</p>
 
           <div className="space-y-4">
             {projects.map((p) => {
@@ -382,7 +474,7 @@ export default function Home() {
       <section id="skills" className="bg-gray-50 py-20">
         <div className="max-w-5xl mx-auto px-6">
           <h2 className="text-2xl font-bold mb-10">Skills & Tools</h2>
-          <div className="grid md:grid-cols-3 gap-6">
+          <div className="grid md:grid-cols-2 gap-6">
             {skills.map((s) => (
               <div key={s.category} className="bg-white rounded-xl p-6 border border-gray-100">
                 <p className="text-sm font-medium text-gray-400 mb-3">{s.category}</p>
