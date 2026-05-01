@@ -239,19 +239,67 @@ export default function Home() {
       {/* About */}
       <section id="about" className="bg-gray-50 py-20">
         <div className="max-w-5xl mx-auto px-6">
-          <h2 className="text-2xl font-bold mb-8">About</h2>
-          <div className="grid md:grid-cols-3 gap-8">
-            {[
-              { label: "경력", value: "5년+", desc: "서비스 기획 / PM" },
-              { label: "프로젝트", value: "7개", desc: "B2B · B2C · 글로벌" },
-              { label: "도메인", value: "리테일 · 유통/물류 · 커머스 · 여행", desc: "다양한 산업 경험" },
-            ].map((item) => (
-              <div key={item.label} className="bg-white rounded-xl p-6 border border-gray-100">
-                <p className="text-sm text-gray-400 mb-1">{item.label}</p>
-                <p className="text-2xl font-bold">{item.value}</p>
-                <p className="text-sm text-gray-500 mt-1">{item.desc}</p>
+          <h2 className="text-2xl font-bold mb-10">About</h2>
+
+          <div className="grid md:grid-cols-[1fr_1.5fr] gap-12">
+            {/* Left — Profile */}
+            <div className="space-y-6">
+              <div>
+                <p className="text-sm text-gray-400 mb-1">이름</p>
+                <p className="text-lg font-semibold">이우주 (Wooju Lee)</p>
               </div>
-            ))}
+              <div>
+                <p className="text-sm text-gray-400 mb-1">직무</p>
+                <p className="text-base">PM / 서비스 기획자</p>
+              </div>
+              <div>
+                <p className="text-sm text-gray-400 mb-1">경력</p>
+                <p className="text-base">5년+ (2021 ~ 현재)</p>
+              </div>
+              <div>
+                <p className="text-sm text-gray-400 mb-1">현재</p>
+                <p className="text-base">젠틀몬스터 IT부문 PM팀</p>
+              </div>
+            </div>
+
+            {/* Right — Career timeline */}
+            <div className="space-y-5">
+              {[
+                {
+                  company: "Gentle Monster",
+                  role: "PM (프로젝트매니저)",
+                  period: "2025.01 ~ 재직중",
+                  desc: "글로벌 리테일 시스템 기획, SAP·Shopify·NetSuite 연계 운영 환경 구축",
+                },
+                {
+                  company: "TeamFresh",
+                  role: "서비스 기획자",
+                  period: "2023.03 ~ 2024.11",
+                  desc: "유통/물류 전산 통합 시스템(RDMS) 기획, 식자재 주문 플랫폼, 일본 법인 시스템 도입",
+                },
+                {
+                  company: "mybeautip",
+                  role: "서비스 기획자",
+                  period: "2022.08 ~ 2023.09",
+                  desc: "K뷰티 커뮤니티 & 커머스 플랫폼, 글로벌 통합 어드민 기획",
+                },
+                {
+                  company: "THE ASTA",
+                  role: "서비스 기획자",
+                  period: "2021.01 ~ 2022.08",
+                  desc: "가상자산 결제 기반 호텔/여행 예약 플랫폼 기획",
+                },
+              ].map((c) => (
+                <div key={c.company} className="bg-white rounded-xl p-5 border border-gray-100">
+                  <div className="flex items-center justify-between mb-1.5">
+                    <p className="font-semibold text-sm">{c.company}</p>
+                    <p className="text-xs text-gray-400">{c.period}</p>
+                  </div>
+                  <p className="text-xs text-gray-500 mb-1.5">{c.role}</p>
+                  <p className="text-sm text-gray-600 leading-relaxed">{c.desc}</p>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>
