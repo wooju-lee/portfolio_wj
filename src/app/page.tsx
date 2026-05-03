@@ -209,56 +209,58 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-white">
       {/* Header */}
-      <header className="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-gray-100">
+      <header className="sticky top-0 z-50 bg-navy-900/95 backdrop-blur-md border-b border-navy-800">
         <nav className="max-w-5xl mx-auto px-6 h-14 flex items-center justify-between">
-          <span className="text-sm font-semibold tracking-tight">Wooju Lee</span>
-          <div className="flex gap-6 text-sm text-gray-500">
-            <a href="#about" className="hover:text-gray-900 transition-colors">About</a>
-            <a href="#projects" className="hover:text-gray-900 transition-colors">Projects</a>
-            <a href="#skills" className="hover:text-gray-900 transition-colors">Skills</a>
-            <a href="#contact" className="hover:text-gray-900 transition-colors">Contact</a>
+          <span className="text-sm font-semibold tracking-tight text-white">PM Portfolio</span>
+          <div className="flex gap-6 text-sm text-navy-100/70">
+            <a href="#about" className="hover:text-white transition-colors">About</a>
+            <a href="#projects" className="hover:text-white transition-colors">Projects</a>
+            <a href="#skills" className="hover:text-white transition-colors">Skills</a>
+            <a href="#contact" className="hover:text-white transition-colors">Contact</a>
           </div>
         </nav>
       </header>
 
       {/* Hero */}
-      <section className="max-w-5xl mx-auto px-6 pt-24 pb-20">
-        <p className="text-sm text-gray-400 mb-3 animate-fade-in-up">Product Management Portfolio</p>
-        <h1 className="text-4xl md:text-5xl font-bold tracking-tight leading-tight animate-fade-in-up animate-delay-100">
-          이우주
-        </h1>
-        <p className="mt-4 text-lg text-gray-500 max-w-xl animate-fade-in-up animate-delay-200">
-          서비스 기획자 · Since 2021
-        </p>
-        <p className="mt-2 text-base text-gray-400 max-w-2xl leading-relaxed animate-fade-in-up animate-delay-300">
-          글로벌 리테일, 유통/물류, 커머스, 여행 플랫폼 등 다양한 도메인에서<br className="hidden sm:block" />
-          문제를 정의하고 사용자 중심의 서비스를 기획해 왔습니다.
-        </p>
+      <section className="bg-navy-800 text-white">
+        <div className="max-w-5xl mx-auto px-6 pt-24 pb-20">
+          <p className="text-sm text-navy-100/60 mb-3 animate-fade-in-up">Product Management Portfolio</p>
+          <h1 className="text-4xl md:text-5xl font-bold tracking-tight leading-tight animate-fade-in-up animate-delay-100">
+            이우주
+          </h1>
+          <p className="mt-4 text-lg text-navy-100/80 max-w-xl animate-fade-in-up animate-delay-200">
+            서비스 기획자 · Since 2021
+          </p>
+          <p className="mt-2 text-base text-navy-100/60 max-w-2xl leading-relaxed animate-fade-in-up animate-delay-300">
+            글로벌 리테일, 유통/물류, 커머스, 여행 플랫폼 등 다양한 도메인에서<br className="hidden sm:block" />
+            문제를 정의하고 사용자 중심의 서비스를 기획해 왔습니다.
+          </p>
+        </div>
       </section>
 
       {/* About */}
-      <section id="about" className="bg-gray-50 py-20">
+      <section id="about" className="bg-navy-50 py-20">
         <div className="max-w-5xl mx-auto px-6">
-          <h2 className="text-2xl font-bold mb-10">About</h2>
+          <h2 className="text-2xl font-bold text-navy-900 mb-10">About</h2>
 
           <div className="grid md:grid-cols-[1fr_1.5fr] gap-12">
             {/* Left — Profile */}
             <div className="space-y-6">
               <div>
-                <p className="text-sm text-gray-400 mb-1">이름</p>
-                <p className="text-lg font-semibold">이우주 (Wooju Lee)</p>
+                <p className="text-sm text-navy-600 mb-1">이름</p>
+                <p className="text-lg font-semibold text-navy-900">이우주 (Wooju Lee)</p>
               </div>
               <div>
-                <p className="text-sm text-gray-400 mb-1">직무</p>
-                <p className="text-base">PM / 서비스 기획자</p>
+                <p className="text-sm text-navy-600 mb-1">직무</p>
+                <p className="text-base text-navy-900">PM / 서비스 기획자</p>
               </div>
               <div>
-                <p className="text-sm text-gray-400 mb-1">경력</p>
-                <p className="text-base">5년+ (2021 ~ 현재)</p>
+                <p className="text-sm text-navy-600 mb-1">경력</p>
+                <p className="text-base text-navy-900">5년+ (2021 ~ 현재)</p>
               </div>
               <div>
-                <p className="text-sm text-gray-400 mb-1">현재</p>
-                <p className="text-base">젠틀몬스터 IT부문 PM팀</p>
+                <p className="text-sm text-navy-600 mb-1">현재</p>
+                <p className="text-base text-navy-900">젠틀몬스터 IT부문 PM팀</p>
               </div>
             </div>
 
@@ -290,12 +292,12 @@ export default function Home() {
                   desc: "가상자산 결제 기반 호텔/여행 예약 플랫폼 기획",
                 },
               ].map((c) => (
-                <div key={c.company} className="bg-white rounded-xl p-5 border border-gray-100">
+                <div key={c.company} className="bg-white rounded-xl p-5 border border-navy-100">
                   <div className="flex items-center justify-between mb-1.5">
-                    <p className="font-semibold text-sm">{c.company}</p>
-                    <p className="text-xs text-gray-400">{c.period}</p>
+                    <p className="font-semibold text-sm text-navy-900">{c.company}</p>
+                    <p className="text-xs text-navy-600">{c.period}</p>
                   </div>
-                  <p className="text-xs text-gray-500 mb-1.5">{c.role}</p>
+                  <p className="text-xs text-navy-600 mb-1.5">{c.role}</p>
                   <p className="text-sm text-gray-600 leading-relaxed">{c.desc}</p>
                 </div>
               ))}
@@ -307,8 +309,8 @@ export default function Home() {
       {/* Projects */}
       <section id="projects" className="py-20">
         <div className="max-w-5xl mx-auto px-6">
-          <h2 className="text-2xl font-bold mb-2">Projects</h2>
-          <p className="text-sm text-gray-400 mb-10">2021 — 2026</p>
+          <h2 className="text-2xl font-bold text-navy-900 mb-2">Projects</h2>
+          <p className="text-sm text-navy-600 mb-10">2021 — 2026</p>
 
           <div className="space-y-4">
             {projects.map((p) => {
@@ -316,7 +318,7 @@ export default function Home() {
               return (
                 <div
                   key={p.id}
-                  className="border border-gray-100 rounded-xl overflow-hidden transition-shadow hover:shadow-sm"
+                  className="border border-navy-100 rounded-xl overflow-hidden transition-shadow hover:shadow-sm"
                 >
                   {/* Summary row */}
                   <button
@@ -325,17 +327,17 @@ export default function Home() {
                   >
                     <div className="flex-1 min-w-0">
                       <div className="flex items-center gap-3 flex-wrap">
-                        <span className="text-xs font-medium text-gray-400 bg-gray-50 px-2 py-0.5 rounded">
+                        <span className="text-xs font-medium text-navy-700 bg-navy-50 px-2 py-0.5 rounded">
                           {p.company}
                         </span>
-                        <h3 className="text-lg font-semibold truncate">{p.title}</h3>
+                        <h3 className="text-lg font-semibold text-navy-900 truncate">{p.title}</h3>
                       </div>
                       <p className="text-sm text-gray-500 mt-1">{p.subtitle}</p>
                     </div>
                     <div className="flex items-center gap-4 shrink-0">
-                      <span className="text-xs text-gray-400 hidden sm:block">{p.period}</span>
+                      <span className="text-xs text-navy-600 hidden sm:block">{p.period}</span>
                       <svg
-                        className={`w-5 h-5 text-gray-300 transition-transform ${isOpen ? "rotate-180" : ""}`}
+                        className={`w-5 h-5 text-navy-600/40 transition-transform ${isOpen ? "rotate-180" : ""}`}
                         fill="none"
                         viewBox="0 0 24 24"
                         stroke="currentColor"
@@ -348,26 +350,26 @@ export default function Home() {
 
                   {/* Detail */}
                   {isOpen && (
-                    <div className="px-6 pb-6 pt-0 border-t border-gray-50">
+                    <div className="px-6 pb-6 pt-0 border-t border-navy-50">
                       <div className="grid md:grid-cols-2 gap-8 mt-5">
                         {/* Left column */}
                         <div className="space-y-5">
                           <div>
-                            <p className="text-xs font-medium text-gray-400 mb-1">기간</p>
+                            <p className="text-xs font-medium text-navy-600 mb-1">기간</p>
                             <p className="text-sm">{p.period}</p>
                           </div>
                           <div>
-                            <p className="text-xs font-medium text-gray-400 mb-1">팀 구성</p>
+                            <p className="text-xs font-medium text-navy-600 mb-1">팀 구성</p>
                             <p className="text-sm">{p.team}</p>
                           </div>
                           {"budget" in p && (
                             <div>
-                              <p className="text-xs font-medium text-gray-400 mb-1">투입 예산</p>
+                              <p className="text-xs font-medium text-navy-600 mb-1">투입 예산</p>
                               <p className="text-sm">{(p as typeof projects[5]).budget}</p>
                             </div>
                           )}
                           <div>
-                            <p className="text-xs font-medium text-gray-400 mb-2">담당 업무</p>
+                            <p className="text-xs font-medium text-navy-600 mb-2">담당 업무</p>
                             <ul className="space-y-1">
                               {p.role.map((r) => (
                                 <li key={r} className="text-sm text-gray-600 flex gap-2">
@@ -377,10 +379,10 @@ export default function Home() {
                             </ul>
                           </div>
                           <div>
-                            <p className="text-xs font-medium text-gray-400 mb-2">활용 도구</p>
+                            <p className="text-xs font-medium text-navy-600 mb-2">활용 도구</p>
                             <div className="flex flex-wrap gap-1.5">
                               {p.tools.map((t) => (
-                                <span key={t} className="text-xs bg-gray-50 text-gray-600 px-2 py-1 rounded">
+                                <span key={t} className="text-xs bg-navy-50 text-navy-700 px-2 py-1 rounded">
                                   {t}
                                 </span>
                               ))}
@@ -391,15 +393,15 @@ export default function Home() {
                         {/* Right column */}
                         <div className="space-y-5">
                           <div>
-                            <p className="text-xs font-medium text-gray-400 mb-2">소개</p>
+                            <p className="text-xs font-medium text-navy-600 mb-2">소개</p>
                             <p className="text-sm text-gray-600 leading-relaxed">{p.summary}</p>
                           </div>
                           <div>
-                            <p className="text-xs font-medium text-gray-400 mb-2">작업 프로세스</p>
+                            <p className="text-xs font-medium text-navy-600 mb-2">작업 프로세스</p>
                             <div className="flex flex-wrap gap-2">
                               {p.process.map((step, i) => (
                                 <div key={step} className="flex items-center gap-2">
-                                  <span className="text-xs bg-gray-900 text-white w-5 h-5 rounded-full flex items-center justify-center">
+                                  <span className="text-xs bg-navy-800 text-white w-5 h-5 rounded-full flex items-center justify-center">
                                     {i + 1}
                                   </span>
                                   <span className="text-sm text-gray-600">{step}</span>
@@ -412,7 +414,7 @@ export default function Home() {
                           </div>
                           {p.results.length > 0 && (
                             <div>
-                              <p className="text-xs font-medium text-gray-400 mb-2">기대 결과</p>
+                              <p className="text-xs font-medium text-navy-600 mb-2">기대 결과</p>
                               <ul className="space-y-1">
                                 {p.results.map((r) => (
                                   <li key={r} className="text-sm text-gray-600 flex gap-2">
@@ -425,7 +427,7 @@ export default function Home() {
                           )}
                           {"roadmap" in p && (
                             <div>
-                              <p className="text-xs font-medium text-gray-400 mb-2">확장 로드맵</p>
+                              <p className="text-xs font-medium text-navy-600 mb-2">확장 로드맵</p>
                               <ul className="space-y-1">
                                 {(p as typeof projects[2]).roadmap!.map((r) => (
                                   <li key={r} className="text-sm text-gray-600 flex gap-2">
@@ -448,16 +450,16 @@ export default function Home() {
       </section>
 
       {/* Skills */}
-      <section id="skills" className="bg-gray-50 py-20">
+      <section id="skills" className="bg-navy-50 py-20">
         <div className="max-w-5xl mx-auto px-6">
-          <h2 className="text-2xl font-bold mb-10">Skills & Tools</h2>
+          <h2 className="text-2xl font-bold text-navy-900 mb-10">Skills & Tools</h2>
           <div className="grid md:grid-cols-2 gap-6">
             {skills.map((s) => (
-              <div key={s.category} className="bg-white rounded-xl p-6 border border-gray-100">
-                <p className="text-sm font-medium text-gray-400 mb-3">{s.category}</p>
+              <div key={s.category} className="bg-white rounded-xl p-6 border border-navy-100">
+                <p className="text-sm font-medium text-navy-600 mb-3">{s.category}</p>
                 <div className="flex flex-wrap gap-2">
                   {s.items.map((item) => (
-                    <span key={item} className="text-sm bg-gray-50 px-3 py-1.5 rounded-lg text-gray-700">
+                    <span key={item} className="text-sm bg-navy-50 px-3 py-1.5 rounded-lg text-navy-800">
                       {item}
                     </span>
                   ))}
@@ -469,29 +471,29 @@ export default function Home() {
       </section>
 
       {/* Contact */}
-      <section id="contact" className="py-20">
+      <section id="contact" className="bg-navy-800 text-white py-20">
         <div className="max-w-5xl mx-auto px-6 text-center">
           <h2 className="text-2xl font-bold mb-4">Contact</h2>
-          <p className="text-gray-500 mb-8">프로젝트 협업이나 문의사항이 있으시면 연락해주세요.</p>
+          <p className="text-navy-100/60 mb-8">프로젝트 협업이나 문의사항이 있으시면 연락해주세요.</p>
           <div className="flex justify-center gap-8 text-sm">
             <div>
-              <p className="text-gray-400 mb-1">Email</p>
-              <a href="mailto:Landa0707@naver.com" className="text-gray-900 hover:underline">
+              <p className="text-navy-100/50 mb-1">Email</p>
+              <a href="mailto:Landa0707@naver.com" className="text-white hover:underline">
                 Landa0707@naver.com
               </a>
             </div>
             <div>
-              <p className="text-gray-400 mb-1">Phone</p>
-              <p className="text-gray-900">010-7211-9843</p>
+              <p className="text-navy-100/50 mb-1">Phone</p>
+              <p className="text-white">010-7211-9843</p>
             </div>
           </div>
         </div>
       </section>
 
       {/* Footer */}
-      <footer className="border-t border-gray-100 py-8">
-        <div className="max-w-5xl mx-auto px-6 text-center text-xs text-gray-400">
-          &copy; 2024 Wooju Lee. All rights reserved.
+      <footer className="bg-navy-900 py-8">
+        <div className="max-w-5xl mx-auto px-6 text-center text-xs text-navy-100/40">
+          &copy; 2025 Wooju Lee. All rights reserved.
         </div>
       </footer>
     </div>
