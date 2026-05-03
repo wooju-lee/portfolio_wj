@@ -231,9 +231,9 @@ export default function Home() {
           </h1>
           <div className="mt-6 flex items-center gap-3 text-navy-100/70 animate-fade-in-up animate-delay-200">
             <span className="text-base font-medium text-white">이우주</span>
-            <span className="text-navy-100/30">·</span>
+            <span className="text-gray-300">·</span>
             <span className="text-sm">Wooju Lee</span>
-            <span className="text-navy-100/30">·</span>
+            <span className="text-gray-300">·</span>
             <span className="text-sm">Since 2021</span>
           </div>
           <p className="mt-4 text-base text-navy-100/60 max-w-2xl leading-relaxed animate-fade-in-up animate-delay-300">
@@ -302,10 +302,10 @@ export default function Home() {
       </section>
 
       {/* Projects */}
-      <section id="projects" className="bg-navy-900 text-white py-20">
+      <section id="projects" className="py-20">
         <div className="max-w-5xl mx-auto px-6">
-          <h2 className="text-2xl font-bold mb-2">Projects</h2>
-          <p className="text-sm text-navy-100/50 mb-10">2021 — 2026</p>
+          <h2 className="text-2xl font-bold text-navy-900 mb-2">Projects</h2>
+          <p className="text-sm text-navy-600 mb-10">2021 — 2026</p>
 
           <div className="space-y-4">
             {projects.map((p) => {
@@ -313,8 +313,11 @@ export default function Home() {
               return (
                 <div
                   key={p.id}
-                  className="bg-white/5 border border-white/10 rounded-xl overflow-hidden transition-all hover:bg-white/10 hover:border-white/20"
+                  className="bg-white border border-gray-200 rounded-xl overflow-hidden transition-all hover:shadow-md flex"
                 >
+                  {/* Left accent bar */}
+                  <div className="w-1.5 bg-navy-800 shrink-0 rounded-l-xl" />
+                  <div className="flex-1 min-w-0">
                   {/* Summary row */}
                   <button
                     onClick={() => setOpenId(isOpen ? null : p.id)}
@@ -322,17 +325,17 @@ export default function Home() {
                   >
                     <div className="flex-1 min-w-0">
                       <div className="flex items-center gap-3 flex-wrap">
-                        <span className="text-xs font-medium text-navy-100 bg-white/10 px-2 py-0.5 rounded">
+                        <span className="text-xs font-medium text-navy-800 bg-navy-50 px-2 py-0.5 rounded">
                           {p.company}
                         </span>
-                        <h3 className="text-base font-semibold text-white truncate">{p.title}</h3>
+                        <h3 className="text-base font-semibold text-navy-900 truncate">{p.title}</h3>
                       </div>
-                      <p className="text-xs text-navy-100/50 mt-1">{p.subtitle}</p>
+                      <p className="text-xs text-gray-500 mt-1">{p.subtitle}</p>
                     </div>
                     <div className="flex items-center gap-4 shrink-0">
-                      <span className="text-xs text-navy-100/50 hidden sm:block">{p.period}</span>
+                      <span className="text-xs text-navy-600 hidden sm:block">{p.period}</span>
                       <svg
-                        className={`w-5 h-5 text-navy-100/30 transition-transform ${isOpen ? "rotate-180" : ""}`}
+                        className={`w-5 h-5 text-navy-600/40 transition-transform ${isOpen ? "rotate-180" : ""}`}
                         fill="none"
                         viewBox="0 0 24 24"
                         stroke="currentColor"
@@ -345,39 +348,39 @@ export default function Home() {
 
                   {/* Detail */}
                   {isOpen && (
-                    <div className="px-6 pb-6 pt-0 border-t border-white/10">
+                    <div className="px-6 pb-6 pt-0 border-t border-gray-100">
                       <div className="grid md:grid-cols-2 gap-8 mt-5">
                         {/* Left column */}
                         <div className="space-y-5">
                           <div>
-                            <p className="text-xs font-medium text-navy-100/50 mb-1">기간</p>
+                            <p className="text-xs font-medium text-navy-600 mb-1">기간</p>
                             <p className="text-xs">{p.period}</p>
                           </div>
                           <div>
-                            <p className="text-xs font-medium text-navy-100/50 mb-1">팀 구성</p>
+                            <p className="text-xs font-medium text-navy-600 mb-1">팀 구성</p>
                             <p className="text-xs">{p.team}</p>
                           </div>
                           {"budget" in p && (
                             <div>
-                              <p className="text-xs font-medium text-navy-100/50 mb-1">투입 예산</p>
+                              <p className="text-xs font-medium text-navy-600 mb-1">투입 예산</p>
                               <p className="text-xs">{(p as typeof projects[5]).budget}</p>
                             </div>
                           )}
                           <div>
-                            <p className="text-xs font-medium text-navy-100/50 mb-2">담당 업무</p>
+                            <p className="text-xs font-medium text-navy-600 mb-2">담당 업무</p>
                             <ul className="space-y-1">
                               {p.role.map((r) => (
-                                <li key={r} className="text-xs text-navy-100/60 flex gap-2">
-                                  <span className="text-navy-100/30">·</span>{r}
+                                <li key={r} className="text-xs text-gray-600 flex gap-2">
+                                  <span className="text-gray-300">·</span>{r}
                                 </li>
                               ))}
                             </ul>
                           </div>
                           <div>
-                            <p className="text-xs font-medium text-navy-100/50 mb-2">활용 도구</p>
+                            <p className="text-xs font-medium text-navy-600 mb-2">활용 도구</p>
                             <div className="flex flex-wrap gap-1.5">
                               {p.tools.map((t) => (
-                                <span key={t} className="text-xs bg-white/10 text-navy-100/70 px-2 py-1 rounded">
+                                <span key={t} className="text-xs bg-navy-50 text-navy-700 px-2 py-1 rounded">
                                   {t}
                                 </span>
                               ))}
@@ -388,20 +391,20 @@ export default function Home() {
                         {/* Right column */}
                         <div className="space-y-5">
                           <div>
-                            <p className="text-xs font-medium text-navy-100/50 mb-2">소개</p>
-                            <p className="text-xs text-navy-100/60 leading-relaxed">{p.summary}</p>
+                            <p className="text-xs font-medium text-navy-600 mb-2">소개</p>
+                            <p className="text-xs text-gray-600 leading-relaxed">{p.summary}</p>
                           </div>
                           <div>
-                            <p className="text-xs font-medium text-navy-100/50 mb-2">작업 프로세스</p>
+                            <p className="text-xs font-medium text-navy-600 mb-2">작업 프로세스</p>
                             <div className="flex flex-wrap gap-2">
                               {p.process.map((step, i) => (
                                 <div key={step} className="flex items-center gap-2">
-                                  <span className="text-[10px] bg-white/20 text-white w-4 h-4 rounded-full flex items-center justify-center">
+                                  <span className="text-[10px] bg-navy-800 text-white w-4 h-4 rounded-full flex items-center justify-center">
                                     {i + 1}
                                   </span>
                                   <span className="text-xs text-gray-600">{step}</span>
                                   {i < p.process.length - 1 && (
-                                    <span className="text-navy-100/20 text-xs">→</span>
+                                    <span className="text-gray-300 text-xs">→</span>
                                   )}
                                 </div>
                               ))}
@@ -409,11 +412,11 @@ export default function Home() {
                           </div>
                           {p.results.length > 0 && (
                             <div>
-                              <p className="text-xs font-medium text-navy-100/50 mb-2">기대 결과</p>
+                              <p className="text-xs font-medium text-navy-600 mb-2">기대 결과</p>
                               <ul className="space-y-1">
                                 {p.results.map((r) => (
-                                  <li key={r} className="text-xs text-navy-100/60 flex gap-2">
-                                    <span className="text-navy-100/30 shrink-0">·</span>
+                                  <li key={r} className="text-xs text-gray-600 flex gap-2">
+                                    <span className="text-gray-300 shrink-0">·</span>
                                     <span>{r}</span>
                                   </li>
                                 ))}
@@ -422,11 +425,11 @@ export default function Home() {
                           )}
                           {"roadmap" in p && (
                             <div>
-                              <p className="text-xs font-medium text-navy-100/50 mb-2">확장 로드맵</p>
+                              <p className="text-xs font-medium text-navy-600 mb-2">확장 로드맵</p>
                               <ul className="space-y-1">
                                 {(p as typeof projects[2]).roadmap!.map((r) => (
-                                  <li key={r} className="text-xs text-navy-100/60 flex gap-2">
-                                    <span className="text-navy-100/30 shrink-0">·</span>
+                                  <li key={r} className="text-xs text-gray-600 flex gap-2">
+                                    <span className="text-gray-300 shrink-0">·</span>
                                     <span>{r}</span>
                                   </li>
                                 ))}
@@ -437,6 +440,7 @@ export default function Home() {
                       </div>
                     </div>
                   )}
+                </div>
                 </div>
               );
             })}
