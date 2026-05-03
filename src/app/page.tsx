@@ -113,7 +113,7 @@ const projects = [
   },
   {
     id: 4,
-    company: "mybeautip",
+    company: "Jocoos",
     title: "mybeautip+",
     subtitle: "국내 / 국외 통합 관리 어드민",
     period: "2023.02 ~ 2023.08",
@@ -145,7 +145,7 @@ const projects = [
   },
   {
     id: 5,
-    company: "mybeautip",
+    company: "Jocoos",
     title: "mybeautip",
     subtitle: "K뷰티 커뮤니티 & 커머스 플랫폼 앱",
     period: "2022.08 ~ 2023.09",
@@ -273,7 +273,7 @@ export default function Home() {
                 impact: "6개 운영센터 · 5개 모듈(ERP/OMS/WMS/TMS/CRM) · 46개 관리 메뉴 구축",
               },
               {
-                company: "mybeautip",
+                company: "Jocoos",
                 role: "서비스 기획",
                 period: "2022.08 ~ 2023.09",
                 desc: "K뷰티 커뮤니티 & 커머스 플랫폼, 글로벌 통합 어드민 기획",
