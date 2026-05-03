@@ -211,7 +211,7 @@ export default function Home() {
       {/* Header */}
       <header className="sticky top-0 z-50 bg-navy-900/95 backdrop-blur-md border-b border-navy-800">
         <nav className="max-w-5xl mx-auto px-6 h-14 flex items-center justify-between">
-          <span className="text-sm font-semibold tracking-tight text-white">PM Portfolio</span>
+          <span></span>
           <div className="flex gap-6 text-sm text-navy-100/70">
             <a href="#about" className="hover:text-white transition-colors">About</a>
             <a href="#projects" className="hover:text-white transition-colors">Projects</a>
