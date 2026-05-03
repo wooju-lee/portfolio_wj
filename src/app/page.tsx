@@ -6,8 +6,8 @@ const projects = [
   {
     id: -1,
     company: "IICOMBINED",
-    title: "IIC BO",
-    subtitle: "글로벌 리테일 관리 시스템",
+    title: "IIC BO (RMS)",
+    subtitle: "Gentle Monster 글로벌 리테일 관리 시스템",
     period: "2025.06 ~",
     team: "IT부문 PM팀",
     role: [
