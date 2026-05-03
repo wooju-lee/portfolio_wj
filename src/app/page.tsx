@@ -263,7 +263,7 @@ export default function Home() {
                 role: "PM (프로젝트매니저)",
                 period: "2025.01 ~ 재직중",
                 desc: "글로벌 리테일 시스템 기획, SAP·Shopify·NetSuite 연계 운영 환경 구축",
-                impact: "5개국 14개 법인 운영 통합 · 온·오프라인 12개 스토어 실시간 운영 관리",
+                impact: "글로벌 법인 운영 통합 · US 온·오프라인 12개 스토어 실시간 운영 관리",
               },
               {
                 company: "TeamFresh",
