@@ -225,20 +225,17 @@ export default function Home() {
       <section className="bg-navy-800 text-white">
         <div className="max-w-5xl mx-auto px-6 pt-24 pb-20">
           <p className="text-sm text-navy-100/50 mb-6 animate-fade-in-up">Product Management Portfolio</p>
-          <h1 className="text-2xl md:text-3xl font-bold tracking-tight leading-snug animate-fade-in-up animate-delay-100">
-            운영자의 자리에서 시작해,<br />
-            시스템으로 답을 찾는 PM
+          <h1 className="text-2xl md:text-3xl font-bold tracking-tight animate-fade-in-up animate-delay-100">
+            운영 현장의 문제를 시스템으로 풀어내는 PM
           </h1>
-          <div className="mt-6 flex items-center gap-3 text-navy-100/70 animate-fade-in-up animate-delay-200">
+          <div className="mt-5 flex items-center gap-3 text-navy-100/70 animate-fade-in-up animate-delay-200">
             <span className="text-base font-medium text-white">이우주</span>
             <span className="text-gray-300">·</span>
             <span className="text-sm">Wooju Lee</span>
-            <span className="text-gray-300">·</span>
-            <span className="text-sm">Since 2021</span>
           </div>
-          <p className="mt-4 text-base text-navy-100/60 max-w-2xl leading-relaxed animate-fade-in-up animate-delay-300">
-            여행사 오퍼레이터에서 PM으로. 5개국 글로벌 리테일부터
-            B2B 통합 유통 플랫폼까지, 운영자가 실제로 잘 쓸 수 있는 시스템을 만들어 왔습니다.
+          <p className="mt-4 text-sm text-navy-100/60 max-w-2xl leading-relaxed animate-fade-in-up animate-delay-300">
+            글로벌 리테일 시스템부터 B2B 유통/물류 통합 플랫폼까지,
+            복잡한 운영 환경을 구조화하고 실제 현장에서 동작하는 시스템을 만들어 왔습니다.
           </p>
           <div className="mt-6 flex flex-wrap gap-2 animate-fade-in-up animate-delay-400">
             {["Global Retail", "B2B/B2C Commerce", "WMS·ERP·OMS Integration", "Multi-region Operation", "AI Workflow"].map((chip) => (
