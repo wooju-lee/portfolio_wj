@@ -284,7 +284,7 @@ export default function Home() {
                 role: "서비스 기획",
                 period: "2021.01 ~ 2022.08",
                 desc: "가상자산 결제 기반 호텔/여행 예약 플랫폼 기획",
-                impact: "Expedia API 연동 실시간 예약 시스템 · 투입 예산 약 20억원",
+                impact: "Expedia API 연동 실시간 예약 시스템 · 가상자산 결제 프로세스 도입",
               },
             ].map((c) => (
               <div key={c.company} className="bg-white rounded-xl p-5 border border-navy-100">
