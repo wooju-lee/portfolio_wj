@@ -4,57 +4,6 @@ import { useState } from "react";
 
 const projects = [
   {
-    id: -3,
-    company: "IICOMBINED",
-    title: "US 리테일 관리 시스템 도입",
-    subtitle: "Gentle Monster US 법인 리테일 운영 시스템 구축",
-    period: "2025.12 ~ 2026.05",
-    team: "총 PM (기여도 100%)",
-    role: [
-      "IIC BO 내 ERP(NetSuite)와 3개 계열사 선물/주문 운영(아이아이씨 > 한국안경 > 젠틀몬스터) 프로세스 관리 및 연계 운영 총괄",
-      "IIC BO 시스템을 통한 시스템 도입을 통해 SCM / MD / WMS / Store 사용자 대상 전체 시스템 구축",
-      "ERP 연동 사례 구축에 니어 사이트와 시스템 연계 케이스 스터디 전파",
-    ],
-    tools: ["SAP", "OMS", "WMS", "NetSuite", "Shopify", "ERP"],
-    summary:
-      "Gentle Monster US 법인의 리테일 운영 시스템을 도입한 프로젝트. 법인 내 모든 운영 커버링 기능 100% 대응 제공. 본사·미국 법인 시스템 공유 및 12개 스토어 대상 안정 운영 달성. 렌즈 비즈니스 특화 상세 대응 시스템 반영. BOP(S)/BOH(S) 통합 설계 진행.",
-    process: [
-      "요구사항 분석 및 시스템 설계",
-      "SCM/MD/WMS/Store 시스템 구축",
-      "12개 스토어 안정 운영",
-      "ERP 연계 및 그라운드 운영 검증 100%",
-    ],
-    results: [
-      "법인 내 모든 운영 커버링 기능 100% 대응",
-      "12개 스토어 대상 안정 운영 달성",
-      "렌즈 비즈니스 특화 상세 대응 시스템 반영",
-    ],
-  },
-  {
-    id: -2,
-    company: "IICOMBINED",
-    title: "CA 법인 리테일 운영 시스템 도입",
-    subtitle: "Gentle Monster CA 법인 리테일 운영 시스템 구축",
-    period: "2025.07 ~ 2025.11",
-    team: "총 PM (기여도 75%)",
-    role: [
-      "하나의 법인 신규 오픈 대응 및 일부 시스템 미 반영된 운영 대응 데이터 매칭",
-      "최초 정산의 유의미한 케이스 런칭 리테일 프로세스 완성",
-    ],
-    tools: ["SAP", "OMS", "WMS", "NetSuite", "Shopify"],
-    summary:
-      "Gentle Monster CA 법인의 리테일 운영 시스템을 도입한 프로젝트. 전체 5% 운영비(아직 매칭 데이터 리테일 안정화 후 6개월)기존 프로세스를 활용해 빠르게 CA 법인을 온보딩.",
-    process: [
-      "법인 신규 오픈 대응",
-      "운영 데이터 매칭",
-      "리테일 프로세스 완성",
-    ],
-    results: [
-      "CA 법인 리테일 프로세스 안정화",
-      "기존 US 시스템 활용 빠른 온보딩",
-    ],
-  },
-  {
     id: -1,
     company: "IICOMBINED",
     title: "IIC BO (RMS)",
@@ -62,18 +11,28 @@ const projects = [
     period: "2025.06 ~",
     team: "PM 1명, 백엔드 3명, 프론트 2명, ERP 개발 2명",
     role: [
-      "글로벌 법인 내 ERP(NetSuite)와 계열사 관리 시스템 연계 운영 총괄",
-      "SCM / MD / WMS / Store 사용자 대상 전체 시스템 기획",
+      "IIC BO 내 ERP(NetSuite)와 3개 계열사 운영 프로세스 관리 및 연계 운영 총괄",
+      "SCM / MD / WMS / Store 사용자 대상 전체 시스템 기획 및 구축",
+      "US 법인 리테일 시스템 도입 — 12개 스토어 안정 운영, 렌즈 비즈니스 특화 대응 (기여도 100%)",
+      "CA 법인 리테일 운영 시스템 도입 — 신규 법인 오픈 대응 및 리테일 프로세스 완성 (기여도 75%)",
+      "ERP 연동 사례 구축 및 시스템 연계 케이스 스터디 전파",
     ],
     tools: ["SAP", "OMS", "WMS", "NetSuite", "Shopify", "ERP"],
     summary:
-      "Gentle Monster의 글로벌 리테일 관리 시스템(IIC BO). 글로벌 법인의 리테일 운영을 통합 관리하는 백오피스 시스템으로, ERP 연동 및 다국가 운영 프로세스를 표준화.",
+      "Gentle Monster의 글로벌 리테일 관리 시스템(IIC BO). 글로벌 법인의 리테일 운영을 통합 관리하는 백오피스 시스템으로, ERP 연동 및 다국가 운영 프로세스를 표준화. US 법인 12개 스토어 전체 운영 커버링 및 CA 법인 신규 온보딩까지 수행.",
     process: [
-      "요구사항 분석",
-      "시스템 설계",
-      "구축 및 운영",
+      "요구사항 분석 및 시스템 설계",
+      "SCM/MD/WMS/Store 시스템 구축",
+      "US·CA 법인 도입 및 안정 운영",
+      "ERP 연계 및 운영 검증",
     ],
-    results: [],
+    results: [
+      "US 법인 모든 운영 커버링 기능 100% 대응",
+      "US 12개 스토어 대상 안정 운영 달성",
+      "CA 법인 리테일 프로세스 안정화 및 빠른 온보딩",
+      "렌즈 비즈니스 특화 상세 대응 시스템 반영",
+      "BOP(S)/BOH(S) 통합 설계 진행",
+    ],
   },
   {
     id: 1,
