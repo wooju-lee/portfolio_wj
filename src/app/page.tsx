@@ -5,7 +5,7 @@ import { useState } from "react";
 const projects = [
   {
     id: -1,
-    company: "Gentle Monster",
+    company: "IICOMBINED",
     title: "IIC BO",
     subtitle: "글로벌 리테일 관리 시스템",
     period: "2025.06 ~",
@@ -259,7 +259,7 @@ export default function Home() {
           <div className="space-y-4">
             {[
               {
-                company: "Gentle Monster",
+                company: "IICOMBINED",
                 role: "PM (프로젝트매니저)",
                 period: "2025.01 ~ 재직중",
                 desc: "글로벌 리테일 시스템 기획, SAP·Shopify·NetSuite 연계 운영 환경 구축",
