@@ -468,18 +468,19 @@ export default function Home() {
       {/* Contact */}
       <section id="contact" className="bg-navy-800 text-white py-20">
         <div className="max-w-5xl mx-auto px-6 text-center">
-          <h2 className="text-2xl font-bold mb-4">Contact</h2>
-          <p className="text-navy-100/60 mb-8">프로젝트 협업이나 문의사항이 있으시면 연락해주세요.</p>
-          <div className="flex justify-center gap-8 text-sm">
+          <h2 className="text-2xl font-bold mb-3">Let&apos;s Connect</h2>
+          <p className="text-navy-100/60 mb-10 text-sm leading-relaxed">
+            새로운 기회나 협업에 열려 있습니다.<br />
+            아래 연락처로 편하게 연락해주세요.
+          </p>
+          <div className="flex justify-center gap-12 text-sm">
+            <a href="mailto:Landa0707@naver.com" className="group">
+              <p className="text-navy-100/40 text-xs mb-1.5">Email</p>
+              <p className="text-white group-hover:underline">Landa0707@naver.com</p>
+            </a>
             <div>
-              <p className="text-navy-100/50 mb-1">Email</p>
-              <a href="mailto:Landa0707@naver.com" className="text-white hover:underline">
-                Landa0707@naver.com
-              </a>
-            </div>
-            <div>
-              <p className="text-navy-100/50 mb-1">Phone</p>
-              <p className="text-white">010-7211-9843</p>
+              <p className="text-navy-100/40 text-xs mb-1.5">Phone</p>
+              <p className="text-white">+82 10 7211 9843</p>
             </div>
           </div>
         </div>
@@ -488,7 +489,7 @@ export default function Home() {
       {/* Footer */}
       <footer className="bg-navy-900 py-8">
         <div className="max-w-5xl mx-auto px-6 text-center text-xs text-navy-100/40">
-          &copy; 2025 Wooju Lee. All rights reserved.
+          &copy; 2026 Wooju Lee. All rights reserved.
         </div>
       </footer>
     </div>
