@@ -224,17 +224,29 @@ export default function Home() {
       {/* Hero */}
       <section className="bg-navy-800 text-white">
         <div className="max-w-5xl mx-auto px-6 pt-24 pb-20">
-          <p className="text-sm text-navy-100/60 mb-3 animate-fade-in-up">Product Management Portfolio</p>
-          <h1 className="text-4xl md:text-5xl font-bold tracking-tight leading-tight animate-fade-in-up animate-delay-100">
-            이우주
+          <p className="text-sm text-navy-100/50 mb-6 animate-fade-in-up">Product Management Portfolio</p>
+          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight leading-snug animate-fade-in-up animate-delay-100">
+            운영자의 자리에서 시작해,<br />
+            시스템으로 답을 찾는 PM
           </h1>
-          <p className="mt-4 text-lg text-navy-100/80 max-w-xl animate-fade-in-up animate-delay-200">
-            서비스 기획자 · Since 2021
+          <div className="mt-6 flex items-center gap-3 text-navy-100/70 animate-fade-in-up animate-delay-200">
+            <span className="text-base font-medium text-white">이우주</span>
+            <span className="text-navy-100/30">·</span>
+            <span className="text-sm">Wooju Lee</span>
+            <span className="text-navy-100/30">·</span>
+            <span className="text-sm">Since 2021</span>
+          </div>
+          <p className="mt-4 text-base text-navy-100/60 max-w-2xl leading-relaxed animate-fade-in-up animate-delay-300">
+            여행사 오퍼레이터에서 PM으로. 5개국 글로벌 리테일부터
+            B2B 통합 유통 플랫폼까지, 운영자가 실제로 잘 쓸 수 있는 시스템을 만들어 왔습니다.
           </p>
-          <p className="mt-2 text-base text-navy-100/60 max-w-2xl leading-relaxed animate-fade-in-up animate-delay-300">
-            글로벌 리테일, 유통/물류, 커머스, 여행 플랫폼 등 다양한 도메인에서<br className="hidden sm:block" />
-            문제를 정의하고 사용자 중심의 서비스를 기획해 왔습니다.
-          </p>
+          <div className="mt-6 flex flex-wrap gap-2 animate-fade-in-up animate-delay-400">
+            {["Global Retail", "B2B/B2C Commerce", "WMS·ERP·OMS Integration", "Multi-region Operation", "AI Workflow"].map((chip) => (
+              <span key={chip} className="text-xs px-3 py-1.5 rounded-full border border-navy-100/20 text-navy-100/70">
+                {chip}
+              </span>
+            ))}
+          </div>
         </div>
       </section>
 
@@ -243,65 +255,76 @@ export default function Home() {
         <div className="max-w-5xl mx-auto px-6">
           <h2 className="text-2xl font-bold text-navy-900 mb-10">About</h2>
 
-          <div className="grid md:grid-cols-[1fr_1.5fr] gap-12">
-            {/* Left — Profile */}
-            <div className="space-y-6">
-              <div>
-                <p className="text-sm text-navy-600 mb-1">이름</p>
-                <p className="text-lg font-semibold text-navy-900">이우주 (Wooju Lee)</p>
+          {/* Story cards */}
+          <div className="grid md:grid-cols-3 gap-6 mb-14">
+            {[
+              {
+                num: "01",
+                title: "From Operator to PM",
+                body: "여행사 오퍼레이터로 시작해, 매일 사용하던 어드민의 비효율을 직접 정리해 PM이 되었습니다. 운영 현장에서 출발한 PM의 시선이 모든 프로젝트의 결을 만듭니다.",
+              },
+              {
+                num: "02",
+                title: "From Domain to Domain",
+                body: "B2C 서비스 → B2B 유통 → 글로벌 리테일까지, 도메인을 넓혀오며 이종 시스템 통합과 다국가 운영의 복잡성을 시스템으로 풀어내는 경험을 쌓아왔습니다.",
+              },
+              {
+                num: "03",
+                title: "From Document to Field",
+                body: "시스템은 문서 위가 아니라 현장에서 완성된다고 믿습니다. 릴리즈에서 끝내지 않고, 현장에 직접 투입되어 안정화까지 책임지는 방식으로 일해왔습니다.",
+              },
+            ].map((card) => (
+              <div key={card.num} className="bg-white rounded-xl p-6 border border-navy-100">
+                <p className="text-xs font-bold text-navy-800 mb-2">{card.num}</p>
+                <p className="text-base font-semibold text-navy-900 mb-3">{card.title}</p>
+                <p className="text-sm text-gray-600 leading-relaxed">{card.body}</p>
               </div>
-              <div>
-                <p className="text-sm text-navy-600 mb-1">직무</p>
-                <p className="text-base text-navy-900">PM / 서비스 기획자</p>
-              </div>
-              <div>
-                <p className="text-sm text-navy-600 mb-1">경력</p>
-                <p className="text-base text-navy-900">5년+ (2021 ~ 현재)</p>
-              </div>
-              <div>
-                <p className="text-sm text-navy-600 mb-1">현재</p>
-                <p className="text-base text-navy-900">젠틀몬스터 IT부문 PM팀</p>
-              </div>
-            </div>
+            ))}
+          </div>
 
-            {/* Right — Career timeline */}
-            <div className="space-y-5">
-              {[
-                {
-                  company: "Gentle Monster",
-                  role: "PM (프로젝트매니저)",
-                  period: "2025.01 ~ 재직중",
-                  desc: "글로벌 리테일 시스템 기획, SAP·Shopify·NetSuite 연계 운영 환경 구축",
-                },
-                {
-                  company: "TeamFresh",
-                  role: "서비스 기획자",
-                  period: "2023.03 ~ 2024.11",
-                  desc: "유통/물류 전산 통합 시스템(RDMS) 기획, 식자재 주문 플랫폼, 일본 법인 시스템 도입",
-                },
-                {
-                  company: "mybeautip",
-                  role: "서비스 기획자",
-                  period: "2022.08 ~ 2023.09",
-                  desc: "K뷰티 커뮤니티 & 커머스 플랫폼, 글로벌 통합 어드민 기획",
-                },
-                {
-                  company: "THE ASTA",
-                  role: "서비스 기획자",
-                  period: "2021.01 ~ 2022.08",
-                  desc: "가상자산 결제 기반 호텔/여행 예약 플랫폼 기획",
-                },
-              ].map((c) => (
-                <div key={c.company} className="bg-white rounded-xl p-5 border border-navy-100">
-                  <div className="flex items-center justify-between mb-1.5">
-                    <p className="font-semibold text-sm text-navy-900">{c.company}</p>
-                    <p className="text-xs text-navy-600">{c.period}</p>
-                  </div>
-                  <p className="text-xs text-navy-600 mb-1.5">{c.role}</p>
-                  <p className="text-sm text-gray-600 leading-relaxed">{c.desc}</p>
+          {/* Career timeline with impact */}
+          <h3 className="text-lg font-bold text-navy-900 mb-5">Career</h3>
+          <div className="space-y-4">
+            {[
+              {
+                company: "Gentle Monster",
+                role: "PM (프로젝트매니저)",
+                period: "2025.01 ~ 재직중",
+                desc: "글로벌 리테일 시스템 기획, SAP·Shopify·NetSuite 연계 운영 환경 구축",
+                impact: "5개국 14개 법인 운영 통합 · 온·오프라인 12개 스토어 실시간 운영 관리",
+              },
+              {
+                company: "TeamFresh",
+                role: "서비스 기획자",
+                period: "2023.03 ~ 2024.11",
+                desc: "유통/물류 전산 통합 시스템(RDMS) 기획, 식자재 주문 플랫폼, 일본 법인 시스템 도입",
+                impact: "6개 운영센터 · 5개 모듈(ERP/OMS/WMS/TMS/CRM) · 46개 관리 메뉴 구축",
+              },
+              {
+                company: "mybeautip",
+                role: "서비스 기획자",
+                period: "2022.08 ~ 2023.09",
+                desc: "K뷰티 커뮤니티 & 커머스 플랫폼, 글로벌 통합 어드민 기획",
+                impact: "한국·태국·베트남 3개국 통합 운영 백오피스 구축",
+              },
+              {
+                company: "THE ASTA",
+                role: "서비스 기획자",
+                period: "2021.01 ~ 2022.08",
+                desc: "가상자산 결제 기반 호텔/여행 예약 플랫폼 기획",
+                impact: "Expedia API 연동 실시간 예약 시스템 · 투입 예산 약 20억원",
+              },
+            ].map((c) => (
+              <div key={c.company} className="bg-white rounded-xl p-5 border border-navy-100">
+                <div className="flex items-center justify-between mb-1.5">
+                  <p className="font-semibold text-sm text-navy-900">{c.company}</p>
+                  <p className="text-xs text-navy-600">{c.period}</p>
                 </div>
-              ))}
-            </div>
+                <p className="text-xs text-navy-600 mb-1.5">{c.role}</p>
+                <p className="text-sm text-gray-600 leading-relaxed">{c.desc}</p>
+                <p className="text-xs text-navy-700 mt-2 font-medium">→ {c.impact}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
