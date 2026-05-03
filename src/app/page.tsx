@@ -255,34 +255,46 @@ export default function Home() {
         <div className="max-w-5xl mx-auto px-6">
           <h2 className="text-2xl font-bold text-navy-900 mb-10">About</h2>
 
-          {/* Story keywords - compact */}
-          <div className="grid md:grid-cols-3 gap-6 mb-12">
+          {/* Career timeline with impact */}
+          <div className="space-y-4">
             {[
-              { title: "Operator → PM", desc: "운영 현장에서 출발한 시선" },
-              { title: "Domain to Domain", desc: "B2C → B2B → 글로벌 리테일" },
-              { title: "Document → Field", desc: "현장 안정화까지 책임" },
-            ].map((card) => (
-              <div key={card.title} className="bg-white rounded-xl px-5 py-4 border border-navy-100">
-                <p className="text-sm font-semibold text-navy-900">{card.title}</p>
-                <p className="text-xs text-gray-500 mt-1">{card.desc}</p>
-              </div>
-            ))}
-          </div>
-
-          {/* Career - compact */}
-          <div className="space-y-3">
-            {[
-              { company: "Gentle Monster", period: "2025.01 ~ 재직중", impact: "5개국 글로벌 리테일 시스템 · SAP·Shopify·NetSuite 연계" },
-              { company: "TeamFresh", period: "2023.03 ~ 2024.11", impact: "유통/물류 통합 시스템 · 5개 모듈 · 46개 관리 메뉴" },
-              { company: "mybeautip", period: "2022.08 ~ 2023.09", impact: "3개국 통합 어드민 · K뷰티 커머스 플랫폼" },
-              { company: "THE ASTA", period: "2021.01 ~ 2022.08", impact: "Expedia API 실시간 예약 · 가상자산 결제 플랫폼" },
+              {
+                company: "Gentle Monster",
+                role: "PM (프로젝트매니저)",
+                period: "2025.01 ~ 재직중",
+                desc: "글로벌 리테일 시스템 기획, SAP·Shopify·NetSuite 연계 운영 환경 구축",
+                impact: "5개국 14개 법인 운영 통합 · 온·오프라인 12개 스토어 실시간 운영 관리",
+              },
+              {
+                company: "TeamFresh",
+                role: "서비스 기획자",
+                period: "2023.03 ~ 2024.11",
+                desc: "유통/물류 전산 통합 시스템(RDMS) 기획, 식자재 주문 플랫폼, 일본 법인 시스템 도입",
+                impact: "6개 운영센터 · 5개 모듈(ERP/OMS/WMS/TMS/CRM) · 46개 관리 메뉴 구축",
+              },
+              {
+                company: "mybeautip",
+                role: "서비스 기획자",
+                period: "2022.08 ~ 2023.09",
+                desc: "K뷰티 커뮤니티 & 커머스 플랫폼, 글로벌 통합 어드민 기획",
+                impact: "한국·태국·베트남 3개국 통합 운영 백오피스 구축",
+              },
+              {
+                company: "THE ASTA",
+                role: "서비스 기획자",
+                period: "2021.01 ~ 2022.08",
+                desc: "가상자산 결제 기반 호텔/여행 예약 플랫폼 기획",
+                impact: "Expedia API 연동 실시간 예약 시스템 · 투입 예산 약 20억원",
+              },
             ].map((c) => (
-              <div key={c.company} className="bg-white rounded-xl px-5 py-3.5 border border-navy-100 flex items-center justify-between gap-4">
-                <div className="flex items-center gap-4 min-w-0">
-                  <p className="font-semibold text-sm text-navy-900 shrink-0 w-32">{c.company}</p>
-                  <p className="text-sm text-gray-500 truncate">{c.impact}</p>
+              <div key={c.company} className="bg-white rounded-xl p-5 border border-navy-100">
+                <div className="flex items-center justify-between mb-1.5">
+                  <p className="font-semibold text-sm text-navy-900">{c.company}</p>
+                  <p className="text-xs text-navy-600">{c.period}</p>
                 </div>
-                <p className="text-xs text-navy-600 shrink-0">{c.period}</p>
+                <p className="text-xs text-navy-600 mb-1.5">{c.role}</p>
+                <p className="text-sm text-gray-600 leading-relaxed">{c.desc}</p>
+                <p className="text-xs text-navy-700 mt-2 font-medium">→ {c.impact}</p>
               </div>
             ))}
           </div>
