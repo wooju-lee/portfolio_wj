@@ -225,7 +225,7 @@ export default function Home() {
       <section className="bg-navy-800 text-white">
         <div className="max-w-5xl mx-auto px-6 pt-24 pb-20">
           <p className="text-sm text-navy-100/50 mb-6 animate-fade-in-up">Product Management Portfolio</p>
-          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight leading-snug animate-fade-in-up animate-delay-100">
+          <h1 className="text-2xl md:text-3xl font-bold tracking-tight leading-snug animate-fade-in-up animate-delay-100">
             운영자의 자리에서 시작해,<br />
             시스템으로 답을 찾는 PM
           </h1>
